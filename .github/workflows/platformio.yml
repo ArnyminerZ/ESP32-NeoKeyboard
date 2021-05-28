@@ -27,6 +27,8 @@ jobs:
         python -m pip install --upgrade pip
         pip install --upgrade platformio
     - name: Change working directory
-      run: cd ESP32-NeoKeyboard
+      run: |
+        cd ESP32-NeoKeyboard
+        ls -l
     - name: Run PlatformIO
       run: pio run -e esp32doit-devkit-v1
